@@ -1,0 +1,37 @@
+body{
+
+}
+.header{
+  background: #FF4500;
+  color: #FFF;
+}
+.getCity{
+      margin-top: 15px;
+    margin-bottom: 5px;
+}
+.weatherButton{
+  margin-left: 10px;
+}
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  background: url(../images/background.svg) no-repeat center center fixed;
+  background-size: cover;
+}
+.middleCity {
+  color: #FFF;
+}
+.middleCity h1{
+  font-size: 50px;
+}
+.logo{
+  font-size: 40px;
+  color: #FFF;
+}
+.logo:hover, .logo:focus{
+  color: #FFF;
+  text-decoration: none;
+}
