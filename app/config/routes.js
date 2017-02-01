@@ -2,17 +2,17 @@ var React = require('react')
 var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
-var browserHistory = ReactRouter.browserHistory;
+var hashHistory = ReactRouter.hashHistory;
 var IndexRoute = ReactRouter.IndexRoute;
 var Main = require('../containers/Main')
 var HomeContainer = require('../containers/HomeContainer')
-var WeatherContainer = require('../containers/WeatherContainer')
+var ForecastContainer = require('../containers/ForecastContainer')
 
 var routes = (
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={HomeContainer}/>
-      <Route path='weather' component={WeatherContainer}/>
+      <Route path='forecast/:city' component={ForecastContainer}/>
     </Route>
   </Router>
 

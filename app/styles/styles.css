@@ -35,3 +35,13 @@ body{
   color: #FFF;
   text-decoration: none;
 }
+
+.dayList{
+  margin: 30px 50px;
+}
+.img-responsive{
+  width: 50%;
+}
+.jumbotron{
+  background-color: #FFF;
+}
