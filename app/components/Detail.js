@@ -6,7 +6,6 @@ require('../styles/styles.css')
 
 
 function Detail(props){
-    console.log(props)
     return (
       <div>
         <Header />
