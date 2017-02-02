@@ -1,5 +1,6 @@
 var React = require('react')
 var Header = require('./Header')
+var PropTypes = React.PropTypes;
 require('../styles/styles.css')
 
 function ForecastUI(props){
@@ -13,7 +14,6 @@ function ForecastUI(props){
   })
   return(
     <div>
-      
       <div className="jumbotron">
         <div className="text-center">
           <h1>{props.city}</h1>
@@ -26,8 +26,6 @@ function ForecastUI(props){
 }
 
 function Forecast(props){
-  console.log(props)
-
     return (
       <div>
       <Header />
@@ -42,6 +40,12 @@ function Forecast(props){
       }
       </div>
     )
+}
+
+Forecast.propTypes = {
+  city: PropTypes.string.isRequired,
+  date: PropTypes.array.isRequired,
+  list: PropTypes.array.isRequired
 }
 
 module.exports = Forecast

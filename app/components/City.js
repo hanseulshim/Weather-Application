@@ -1,4 +1,5 @@
 var React = require('react')
+var PropTypes = React.PropTypes;
 require('../styles/styles.css')
 
 function City(props){
@@ -18,6 +19,11 @@ function City(props){
         <button type="submit" className="btn btn-info weatherButton">Get Weather</button>
       </form>
     )
+}
+
+City.propTypes = {
+  onSubmitUser: PropTypes.func.isRequired,
+  onUpdateUser: PropTypes.func.isRequired
 }
 
 module.exports = City
