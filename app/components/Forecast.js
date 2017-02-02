@@ -7,7 +7,7 @@ require('../styles/styles.css')
 function ForecastUI(props){
   var listItems =  props.forecastData.list.map(function(listItem, index){
         return (
-            <Day key={listItem.dt} onClick={props.onClick.bind(null, listItem)} forecastData={listItem} />
+            <Day key={listItem.dt} onClick={props.onClick.bind(null, listItem)} weather={listItem} />
           )
   })
   return(
