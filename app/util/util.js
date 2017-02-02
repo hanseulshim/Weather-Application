@@ -1,12 +1,12 @@
 var date = new Date()
 module.exports = {
-  GetDates: function(startDate, daysToAdd) {
+  getDates: function(startDate, daysToAdd) {
     var aryDates = [];
 
     for (var i = 0; i <= daysToAdd; i++) {
         var currentDate = new Date();
         currentDate.setDate(startDate.getDate() + i);
-        aryDates.push(DayAsString(currentDate.getDay()) + ", " + currentDate.getDate() + " " + MonthAsString(currentDate.getMonth()));
+        aryDates.push(DayAsString(currentDate.getDay()) + ", " + MonthAsString(currentDate.getMonth()) + " " + currentDate.getDate());
     }
 
     return aryDates;

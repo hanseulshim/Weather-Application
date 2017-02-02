@@ -39,9 +39,17 @@ body{
 .dayList{
   margin: 30px 50px;
 }
-.img-responsive{
-  width: 50%;
+.weatherIcon{
+  height: 130px;
 }
 .jumbotron{
   background-color: #FFF;
+}
+.listDay{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 50px auto;
 }
