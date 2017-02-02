@@ -1,9 +1,6 @@
 var React = require('react')
 var Forecast = require('../components/Forecast')
-var axios = require('axios')
-var key = 'd3f4982d45d3cfacfd7b2d580241bb20'
-
-// api.openweathermap.org/data/2.5/weather?q={}&APPID={APIKEY}
+var getData = require('../helper/api').getData
 
 var ForecastContainer = React.createClass({
   getInitialState: function(){
@@ -15,23 +12,22 @@ var ForecastContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
-  getData: function(city, that){
-    axios
-      .get('http://api.openweathermap.org/data/2.5/forecast/daily?q='+city+'&units=imperial&type=accurate&cnt=5&APPID='+key)
-      .then(function(result){
-        that.setState({
-          forecastData: result.data,
-          isLoading: false
-        })
-      })
-  },
   componentWillReceiveProps: function(nextProps) {
     if(this.props.params.city.toLowerCase() !== nextProps.params.city.toLowerCase() && this.props.params.city !== ''){
-      this.getData(this.props.params.city, this)
+      this.makeRequest(this.props.params.city)
     }
   },
   componentDidMount: function() {
-    this.getData(this.props.params.city, this)
+    this.makeRequest(this.props.params.city)
+  },
+  makeRequest: function(city) {
+    getData(city)
+      .then(function(forecastData){
+        this.setState({
+          isLoading: false,
+          forecastData: forecastData
+        })
+      }.bind(this))
   },
   handleClick: function(weather){
     this.context.router.push({
