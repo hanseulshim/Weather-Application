@@ -9,7 +9,7 @@ function Home(props){
         <Header />
         <div className="row text-center vertical-center">
           <div className="col-sm-12 middleCity">
-              <h1>Enter City and State</h1>
+              <h1>Enter City</h1>
               <CityContainer />
           </div>
         </div>
