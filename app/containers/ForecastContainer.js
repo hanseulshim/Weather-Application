@@ -13,9 +13,7 @@ var ForecastContainer = React.createClass({
     router: React.PropTypes.object.isRequired
   },
   componentWillReceiveProps: function(nextProps) {
-    if(this.props.params.city.toLowerCase() !== nextProps.params.city.toLowerCase() && this.props.params.city !== ''){
       this.makeRequest(this.props.params.city)
-    }
   },
   componentDidMount: function() {
     this.makeRequest(this.props.params.city)
@@ -40,8 +38,8 @@ var ForecastContainer = React.createClass({
   },
   render: function () {
     return (
-      <Forecast 
-        forecastData={this.state.forecastData} 
+      <Forecast
+        forecastData={this.state.forecastData}
         isLoading={this.state.isLoading}
         onClick={this.handleClick}
       />

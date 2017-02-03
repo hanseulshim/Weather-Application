@@ -24,7 +24,7 @@ var CityContainer = React.createClass({
   },
   render: function () {
     return (
-      <City 
+      <City
         onSubmitUser={this.handleSubmitUser}
         onUpdateUser={this.handleUpdateUser}
         city={this.state.city}

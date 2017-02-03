@@ -11,7 +11,7 @@ function Day(props){
 
     return (
       <div className="dayList text-center"  onClick={props.onClick}>
-           <img className="weatherIcon center-block" src={'../images/weather-icons/' + props.weather.weather[0].icon + '.svg'} />
+           <img className="weatherIcon center-block" src={'app/images/weather-icons/' + props.weather.weather[0].icon + '.svg'} />
            <h2>{day}</h2>
       </div>
     )

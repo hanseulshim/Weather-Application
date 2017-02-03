@@ -7,10 +7,10 @@ function City(props){
       <form className="form-inline getCity" onSubmit={props.onSubmitUser}>
         <div className="form-group">
           <div className="input-group">
-            <input 
-              type="text" 
-              className="form-control" 
-              id="cityName" 
+            <input
+              type="text"
+              className="form-control"
+              id="cityName"
               placeholder="City Name"
               onChange={props.onUpdateUser}
             />

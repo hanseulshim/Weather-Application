@@ -19,5 +19,3 @@ function Header(props){
 }
 
 module.exports = Header
-
-
