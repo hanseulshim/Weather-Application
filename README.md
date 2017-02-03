@@ -1,4 +1,4 @@
-# weather-ui
+# Weather App
 
 Simple weather application built on React.
 
